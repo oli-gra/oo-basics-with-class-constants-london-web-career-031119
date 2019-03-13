@@ -2,11 +2,11 @@ class Shoe
   attr_accessor :color, :size, :material, :condition
   attr_reader :brand
 
-  BRAND = []
+  BRANDS = []
 
   def initialize(brand)
     @brand = brand
-    BRAND << @brand if BRAND.find { |a_brand| @brand }
+    BRANDS << @brand if BRANDS.find { |a_brand| @brand }
   end
 
   def cobble
