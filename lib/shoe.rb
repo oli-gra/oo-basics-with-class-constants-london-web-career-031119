@@ -2,8 +2,13 @@ class Shoe
   attr_accessor :color, :size, :material, :condition
   attr_reader :brand
 
+  BRANDS = []
+
   def initialize(brand)
     @brand = brand
+    if BRANDS.find { |a_brand| a_brand == @brand } == nil
+      BRANDS << @brand
+    end
   end
 
   def cobble
